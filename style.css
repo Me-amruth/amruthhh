@@ -13,24 +13,6 @@ body {
     height: 100vh;
 }
 
-.toggle-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: var(--card-bg);
-    color: var(--accent-color);
-    border: 1px solid var(--border-color);
-    padding: 8px 12px;
-    border-radius: 6px;
-    z-index: 10000;
-    cursor: pointer;
-    box-shadow: 0 4px 8px var(--shadow-color);
-}
-.toggle-btn:hover {
-    background-color: var(--accent-color);
-    color: var(--bg-color);
-}
-
 #intro {
     position: fixed;
     top: 0;
@@ -123,12 +105,35 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #00000063;
-    padding: 10px;
-    border-bottom-left-radius: 50% 20%;
-    border-bottom-right-radius: 50% 20%;
-}
-
+  
+    padding: 3rem 1.5rem;
+  
+    background-image:
+      repeating-linear-gradient(
+        145deg,
+        rgba(174, 187, 140, 0.05) 0px,
+        rgba(194, 194, 194, 0.773) 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(
+        to bottom,
+        rgb(68, 68, 68) 0%,
+        rgb(27, 27, 27) 100%
+      );
+  
+    background-size: 4px 4px, cover;
+    background-blend-mode: soft-light;
+    background-position: center;
+    background-color: #282828;
+  
+    border-bottom-left-radius: 60% 10%;
+    border-bottom-right-radius: 60% 10%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    color: #aebb8c;
+  }
+  
+  
 .profile-info img {
     width: 120px;
     height: 120px;
@@ -166,9 +171,30 @@ h2 {
     margin-bottom: 20px;
 }
 
-.skills, .projects, .services, .about, .contact {
+.skills,
+.projects,
+.services,
+.about,
+footer,
+.contact {
     width: 100%;
-    background-color: #00000063;
+    background-image:
+    repeating-linear-gradient(
+      145deg,
+      rgba(174, 187, 140, 0.05) 0px,
+      rgba(194, 194, 194, 0.773) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    radial-gradient(
+      rgb(68, 68, 68) 0%,
+      rgb(27, 27, 27) 100%
+    );
+
+  background-size: 4px 4px, cover;
+  background-blend-mode: soft-light;
+  background-position: center;
+  background-color: #282828;
     padding: 10px;
     margin-top: 50px;
     display: flex;
@@ -318,7 +344,8 @@ h2 {
     flex-wrap: wrap;
 }
 
-.contact-container a, .social-links a {
+.contact-container a,
+.social-links a {
     text-decoration: none;
     color: #aebb8c;
     display: flex;
@@ -327,7 +354,8 @@ h2 {
     width: fit-content;
 }
 
-.left-container, .right-container {
+.left-container,
+.right-container {
     display: flex;
     flex-direction: column;
     height: 400px;
@@ -352,8 +380,8 @@ textarea {
     padding: 10px;
     width: 100%;
     box-shadow:
-    inset 2px 2px 5px rgba(0, 0, 0, 0.5),
-    inset -2px -2px 5px rgba(174, 187, 140, 0.1);
+        inset 2px 2px 5px rgba(0, 0, 0, 0.5),
+        inset -2px -2px 5px rgba(174, 187, 140, 0.1);
     color: #aebb8c;
     font-size: 1.2rem;
     outline: none;
@@ -406,14 +434,29 @@ footer {
 
 /* Animation */
 @keyframes rotateColors {
-    0% { background-position: 50% 100%; }
-    25% { background-position: 0% 50%; }
-    50% { background-position: 50% 0%; }
-    75% { background-position: 100% 50%; }
-    100% { background-position: 50% 100%; }
+    0% {
+        background-position: 50% 100%;
+    }
+
+    25% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 50% 0%;
+    }
+
+    75% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 50% 100%;
+    }
 }
 
 @media (max-width: 768px) {
+
     .container,
     .contact-container {
         flex-direction: column;
@@ -441,6 +484,7 @@ footer {
         transform: translateY(30px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
