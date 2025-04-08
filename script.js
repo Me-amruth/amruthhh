@@ -36,11 +36,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
     fadeElements.forEach(el => observer.observe(el));
 });
-
-const darkToggle = document.getElementById('darkToggle');
-const body = document.body;
-
-// Load saved theme on page load
-if (localStorage.getItem('theme') === 'light') {
-    body.classList.add('light-mode');
-}
